@@ -5,28 +5,29 @@ var AuthorViewRouter = /** @class */ (function () {
     function AuthorViewRouter() {
     }
     AuthorViewRouter.configRoutes = function (app) {
-        app.get('/', function (req, res) {
+        app.get('/home', function (req, res) {
             res.render('home', {
                 title: 'Book Store',
                 name: 'Xhoani',
                 surname: 'Sadaj',
             });
         });
-        app.get('/about', function (req, res) {
-            res.render('about', {
-                title: 'About Page',
+        app.get('/authorevent', function (req, res) {
+            res.render('authorevent', {
+                title: 'Author Events',
                 name: 'Xhoani',
                 surname: 'Sadaj'
             });
         });
-        app.get('/about/*', function (req, res) {
-            res.render('about', {
-                name: 'Xhoani',
-                surname: 'Sadaj'
-            });
-        });
-        app.get('/help', function (req, res) {
-            res.render('help', {
+        // app.get('/about/*' , (req, res) => {
+        //     res.render('about', {
+        //         name: 'Xhoani',
+        //         surname: 'Sadaj'
+        //     });
+        // });
+        app.get('/authorbooks', function (req, res) {
+            res.render('authorbooks', {
+                title: 'Author Books',
                 name: 'Xhoani',
                 surname: 'Sadaj'
             });
