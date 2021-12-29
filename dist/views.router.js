@@ -5,7 +5,7 @@ var AuthorViewRouter = /** @class */ (function () {
     function AuthorViewRouter() {
     }
     AuthorViewRouter.configRoutes = function (app) {
-        app.get('/home', function (req, res) {
+        app.get('/', function (req, res) {
             res.render('home', {
                 title: 'Book Store',
                 team: 'Node.js Group',
@@ -25,6 +25,11 @@ var AuthorViewRouter = /** @class */ (function () {
         });
         app.get('/addauthor', function (req, res) {
             res.render('addauthor', {
+                team: 'Node.js Group',
+            });
+        });
+        app.get('/authors', function (req, res) {
+            res.render('authors', {
                 team: 'Node.js Group',
             });
         });

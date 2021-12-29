@@ -4,7 +4,7 @@ import * as express from 'express';
 export class AuthorViewRouter {
     public static configRoutes = (app: express.Application): void => {
 
-        app.get('/home', (req, res) => {
+        app.get('/', (req, res) => {
             res.render('home', {
                 title: 'Book Store',
                 team: 'Node.js Group',
@@ -29,6 +29,11 @@ export class AuthorViewRouter {
 
         app.get('/addauthor' , (req, res) => {
             res.render('addauthor', {
+                team: 'Node.js Group',
+            });
+        });
+        app.get('/authors' , (req, res) => {
+            res.render('authors', {
                 team: 'Node.js Group',
             });
         });
