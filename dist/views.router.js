@@ -8,28 +8,24 @@ var AuthorViewRouter = /** @class */ (function () {
         app.get('/home', function (req, res) {
             res.render('home', {
                 title: 'Book Store',
-                name: 'Xhoani',
-                surname: 'Sadaj',
+                team: 'Node.js Group',
             });
         });
         app.get('/authorevent', function (req, res) {
             res.render('authorevent', {
                 title: 'Author Events',
-                name: 'Xhoani',
-                surname: 'Sadaj'
+                team: 'Node.js Group',
             });
         });
-        // app.get('/about/*' , (req, res) => {
-        //     res.render('about', {
-        //         name: 'Xhoani',
-        //         surname: 'Sadaj'
-        //     });
-        // });
         app.get('/authorbooks', function (req, res) {
             res.render('authorbooks', {
                 title: 'Author Books',
-                name: 'Xhoani',
-                surname: 'Sadaj'
+                team: 'Node.js Group',
+            });
+        });
+        app.get('/addauthor', function (req, res) {
+            res.render('addauthor', {
+                team: 'Node.js Group',
             });
         });
         app.get('*', function (req, res) {
